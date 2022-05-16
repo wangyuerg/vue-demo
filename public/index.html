@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>logo.png">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <!-- require cdn assets css -->
+  <% for (var i in htmlWebpackPlugin.options.cdn && htmlWebpackPlugin.options.cdn.css) { %>
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.cdn.css[i] %>" />
+  <% } %>
+</head>
+
+<body>
+  <!-- <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+      Please enable it to continue.</strong>
+  </noscript> -->
+  <div id="app">
+    <div class="first-loading-wrp">
+      <div class="loading-wrp">
+        <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+      </div>
+    </div>
+  </div>
+  <!-- require cdn assets js -->
+  <% for (var i in htmlWebpackPlugin.options.cdn && htmlWebpackPlugin.options.cdn.js) { %>
+  <script type="text/javascript" src="<%= htmlWebpackPlugin.options.cdn.js[i] %>"></script>
+  <% } %>
+  <!-- built files will be auto injected -->
+  <script type="text/javascript" src="<%=BASE_URL %>static/ac.min.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/ac_conf.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/manage_service.js"></script>
+</body>
+
+</html>

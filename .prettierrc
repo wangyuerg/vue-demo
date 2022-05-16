@@ -1,0 +1,8 @@
+{
+  "printWidth": 800,
+  "semi": false,
+  "singleQuote": true,
+  "prettier.spaceBeforeFunctionParen": true,
+  "tabWidth": 2,
+  "useTabs": false
+}

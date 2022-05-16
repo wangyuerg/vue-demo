@@ -1,0 +1,86 @@
+@import '~@/assets/styles/var.less';
+
+.menu-title-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title-info-cmcc {
+    height: 56px;
+    //cmcc logo部分背景色
+    background-color: @jt-sider-menu-cmcc-bg;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    .logo-img {
+      height: 29px;
+      width: 92px;
+    }
+  }
+
+  .title-info-jiutian {
+    width: 44px;
+    height: 46px;
+    margin: 16px 0;
+  }
+
+  .title-info-text {
+    font-size: 16px;
+    font-family: PingFangSC-Semibold;
+    line-height: 22px;
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+}
+
+.ant-layout-header {
+  height: 56px !important;
+}
+
+li.ant-menu-item-active:not(.ant-menu-item-selected) {
+  background-color: @jt-menu-subitem-hover-bg  !important;
+  color: @jt-menu-subitem-hover-color  !important;
+}
+
+.ant-menu-dark .ant-menu-inline.ant-menu-sub {
+  box-shadow: none !important;
+}
+
+
+.ant-layout-sider-collapsed {
+  .ant-pro-sider-menu-logo {
+    height: 56px !important;
+  }
+}
+
+div.ant-menu-inline-collapsed>.ant-menu-item,
+.ant-menu-inline-collapsed>.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item,
+.ant-menu-inline-collapsed>.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title,
+.ant-menu-inline-collapsed>.ant-menu-submenu>.ant-menu-submenu-title {
+  left: -17px !important;
+}
+
+.ant-pro-sider-menu-logo {
+  //sider-logo部分背景色
+  height: 172px;
+  padding-left: 0px;
+  background-color: @jt-sider-menu-header-bg;
+}
+
+.ant-pro-global-header {
+  height: 56px !important;
+}
+
+.ant-layout-sider-collapsed {
+  width: 56px !important;
+  min-width: 56px !important;
+  max-width: 56px !important;
+  flex: 0 0 56px !important;
+}
+
+.ant-menu-inline-collapsed {
+  width: 56px !important;
+}
